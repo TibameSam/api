@@ -365,10 +365,12 @@ curl http://localhost:8888/
 #### build docker image
 
     docker build -f with.env.Dockerfile -t linsamtw/tibame_api:0.0.1 .
+    docker build -f with.env.Dockerfile --platform linux/arm64 -t linsamtw/tibame_api:0.0.1.arm64 .
 
 #### push docker image
 
     docker push linsamtw/tibame_api:0.0.1
+    docker push linsamtw/tibame_api:0.0.1.arm64
 
 #### 啟動 api
 
